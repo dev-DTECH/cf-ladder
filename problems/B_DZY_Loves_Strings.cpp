@@ -70,34 +70,7 @@ void refresh()
 } // end refresh
 void compute()
 {
-    string s;
-    cin >> s;
-    int ok=0;
-    int n=s.size();
-    // int m=;
-    int p=0;
-    vector<string> ar;
-    for(int i=0;i<s.size();i++){
-        if(s[i]%2==0)
-            {
-                ok=1;
-                p=i;
-                if(s[i]<s[n-1])
-                {
-                    swap(s[i],s[n-1]);
-                    cout << s;
-                    return;
-                }
- 
-            }   
-    }
-    if(!ok)
-    {
-        cout << -1<< endl;
-        return;
-    }
-    swap(s[p],s[n-1]);
-    cout << s;
+    
 } // end compute
 int main()
 {

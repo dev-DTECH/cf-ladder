@@ -70,34 +70,28 @@ void refresh()
 } // end refresh
 void compute()
 {
-    string s;
-    cin >> s;
-    int ok=0;
-    int n=s.size();
-    // int m=;
-    int p=0;
-    vector<string> ar;
-    for(int i=0;i<s.size();i++){
-        if(s[i]%2==0)
-            {
-                ok=1;
-                p=i;
-                if(s[i]<s[n-1])
-                {
-                    swap(s[i],s[n-1]);
-                    cout << s;
-                    return;
-                }
- 
-            }   
-    }
-    if(!ok)
+    int n;
+    cin >> n;
+    vector<vector<int>> s(3);
+    FOR(i, 0, n)
     {
-        cout << -1<< endl;
-        return;
+        int t;
+        cin >> t;
+        s[t - 1].push_back(i + 1);
     }
-    swap(s[p],s[n-1]);
-    cout << s;
+    int m = INT_MAX;
+    FOR(i, 0, 3)
+    {
+        m = min(m, (int)s[i].size());
+    }
+
+    cout << m << endl;
+    // return;
+    if (m != 0)
+        FOR(i, 0, m)
+        {
+            cout << s[0][i] << " " << s[1][i] << " " << s[2][i] << endl;
+        }
 } // end compute
 int main()
 {
