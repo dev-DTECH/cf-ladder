@@ -68,28 +68,16 @@ void preprocess()
 void refresh()
 {
 } // end refresh
+double dist(int x1,int y1,int x2,int y2){
+    return sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+}
 void compute()
 {
-    string s;
-    int k;
-    int a[26];
-    int m=INT_MIN;
-    cin >> s;
-    cin >> k;
-    FOR(i,0,26)
-    {
-        cin >> a[i];
-        m=max(m,a[i]);
-    }
-    int ans=0;
-    FOR(i,0,s.size()){
-        // cout << a[s[i]-'a'];
-        ans+=a[s[i]-'a']*(i+1);
-    }
-    FOR(i,s.size(),s.size()+k){
-        ans+=m*(i+1);
-    }
-    cout << ans;
+       int r, x1, y1, x2, y2;
+    cin >> r >> x1 >> y1 >> x2 >> y2;
+    double d = sqrt(pow(y2 - y1, 2.0) + pow(x2 - x1, 2.0));
+    cout << (int)(ceil)(d / r / 2) << endl;
+    
 } // end compute
 int main()
 {

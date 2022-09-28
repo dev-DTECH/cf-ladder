@@ -70,26 +70,21 @@ void refresh()
 } // end refresh
 void compute()
 {
-    string s;
-    int k;
-    int a[26];
-    int m=INT_MIN;
-    cin >> s;
-    cin >> k;
-    FOR(i,0,26)
-    {
-        cin >> a[i];
-        m=max(m,a[i]);
+    int n,d;
+    cin >>n>>d;
+    int ar[n];
+    int sum=0;
+    FOR(i,0,n){
+        cin >> ar[i];
+        sum+=ar[i];
     }
-    int ans=0;
-    FOR(i,0,s.size()){
-        // cout << a[s[i]-'a'];
-        ans+=a[s[i]-'a']*(i+1);
+    if((sum+(n-1)*10)>d){
+        cout << -1;
+        return;
     }
-    FOR(i,s.size(),s.size()+k){
-        ans+=m*(i+1);
-    }
-    cout << ans;
+    cout << (n-1)*2+ (d-(sum+(n-1)*10))/5;
+
+
 } // end compute
 int main()
 {
