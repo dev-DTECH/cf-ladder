@@ -3,7 +3,7 @@
 > Profile - [@dtech](https://codeforces.com/profile/dtech)\
 > Rating - 348 (max. newbie, 348)\
 > Currently Solving - [DIV 2.A](https://a2oj.herokuapp.com/?handle=dtech&rating=0&div=1)
-
+> Code Template - [template.cpp](template.cpp)
 Hey, stuck at any problem?\
 Let's solve together!\
 Join my discord - [TechOverflow](http://discord.io/TechOverflow)
